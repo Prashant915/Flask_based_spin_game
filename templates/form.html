@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exciting Gifts - Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="content flex-content">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='sony.png') }}" alt="Soni Bros Logo"> 
+        </div>
+        <div class="form-header form-header2">
+            <h1>FILL THE FORM AND SUBMIT. YOUR PRIZE IS WAITING!</h1>
+        </div>
+       
+        <div>
+            <form class="gift-form" method="POST" action="/form">
+                <div class="form-group form-group2">
+                    <label for="name">NAME:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group form-group2">
+                    <label for="phone">PHONE:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91" required>
+                </div>
+                <div class="form-group form-group2">
+                    <label for="email">E MAIL:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+        <div class="lastimg">
+            <img src="{{ url_for('static', filename='SPINNING-WHEEL-CONTEST-aaaaa.png') }}" alt="Soni Bros Logo"> 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exciting Gifts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="content flex-content">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='sony.png') }}" alt="Soni Bros Logo"> <!-- Add your logo image path here -->
+        </div>
+        <div class="qr-code">
+            <img src="{{ url_for('static', filename='qr-code.png') }}" alt="QR Code"> <!-- Add your QR code image path here -->
+        </div>
+        <div class="text">
+            <h1>Quick scan and unlock your chance to win exciting gifts!</h1>
+            <img src="https://fontmeme.com/permalink/240820/b5cf7f6c7e0152f36f5ac3155c6b6dd5.png" alt="" border="0">
+        </div>
+    </div>
+</body>
+</html>

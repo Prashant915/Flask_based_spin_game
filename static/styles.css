@@ -1,0 +1,276 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    
+    font-family: Arial, sans-serif;
+    background: url('SPINNING-WHEEL-CONTEST-BG.jpg') no-repeat center center fixed; /* Replace with your background image path */
+    background-size: cover;
+    color: #fff;
+}
+.fade-out-1 {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.hidden-1 {
+    display: none;
+}
+.form-header2{
+    width: 100%;
+    margin: 0 auto;
+}
+.flex-content{
+    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+}
+.flex-content2{
+    display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+}
+.content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.0); /* Black background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.gift-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 1;
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.form-group input {
+    flex: 2;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+}
+
+
+.form-group2{
+    align-items: end !important;
+}
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-submit button {
+    padding: 10px 20px;
+    color: #e60000;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit button:hover {
+    font-weight: bold;
+    transition: all 1s ease;
+}
+
+.gift-image img {
+    max-width: 150px;
+    margin-top: 20px;
+}
+
+.qr-code img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.text h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.free-text {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 768px) {
+    .logo img, .qr-code img {
+        max-width: 200px;
+    }
+    .logo2_new img{
+        max-width: 400px;
+    }
+    .logo2{
+        margin-top: 40%;
+    }
+    .text h1 {
+        font-size: 36px;
+    }
+
+    .free-text {
+        font-size: 48px;
+    }
+    .form-header h1 {
+        font-size: 28px;
+    }
+
+    .form-group label {
+        font-size: 20px;
+    }
+
+    .form-group input {
+        font-size: 18px;
+    }
+
+    .form-submit button {
+        font-size: 20px;
+    }
+
+    .gift-image img {
+        max-width: 200px;
+    }
+}
+
+/* Add this under your other styles in styles.css */
+@keyframes scan {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.qr-code img{
+    animation: scan 1s ease-in-out infinite;
+}
+
+#spin_the_wheel {
+    display: inline-block;
+    position: relative;
+    /* overflow: hidden; */
+  }
+  
+  #wheel {
+    display: block;
+  }
+  
+  #spin {
+    font:
+      2.5em/0 "Lato",
+      sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow:
+      0 0 0 8px currentColor,
+      0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.lastimg img{
+    width:100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.spn{
+    font-size: 7vw;
+    font-family: cursive;
+    font-weight: 600;
+}
+@media screen and (max-width: 768px){
+    #spin_the_wheel {
+        margin-top: 40%;
+        margin-bottom: 5%;
+    }
+        .gift-form {
+            width: 90%;
+        }
+        #spin {
+            height: 16%;
+        }
+}

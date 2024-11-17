@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exciting Gifts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        #prize{
+            font-size: 17px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .flex-content{
+            background-image: url("{{ url_for('static', filename='big-wins-2.png') }}");
+            background-size: contain;
+        }
+        .lastimg img {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content flex-content">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='sony.png') }}" alt="Soni Bros Logo"> <!-- Add your logo image path here -->
+        </div>
+        <div class="lastimg">
+            <img src="{{ url_for('static', filename='big-wins-1.png') }}" alt="img"> <!-- Add your QR code image path here -->
+        </div>
+        <div class="pp">
+            <h1 id="prize"></h1>
+            <h3>www.sonibrosretail.com</h3>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const prize = localStorage.getItem("prize");
+            
+        if (prize === "BETTER LUCK NEXT TIME") {
+        document.getElementById("prize").textContent = "BETTER LUCK NEXT TIME";
+        localStorage.setItem("hasSpun", "false");
+        } 
+
+        else {
+        document.getElementById("prize").textContent = `TAKE A SCREENSHOT OF YOUR ${prize} AND VISIT OUR NEAREST STORE TO GRAB YOUR GIFT!`;
+        localStorage.setItem("hasSpun", "false");
+    }
+        });
+    </script>
+</body>
+</html>
